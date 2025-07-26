@@ -44,7 +44,7 @@
 }
 
 .login-button {
-  background-color: #0F385A; /* Rojo institucional */
+  background-color: #0F385A;
   color: white;
   padding: 12px;
   border: none;
@@ -56,5 +56,5 @@
 }
 
 .login-button:hover {
-  background-color: #C00511; /* Rojo más oscuro para el hover */
+  background-color:rgb(101, 99, 99); /* Rojo más oscuro para el hover */
 }
