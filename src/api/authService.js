@@ -6,7 +6,10 @@ export const login = async (credentials) => {
       const response = await apiClient.post(Auth.LOGIN, credentials);
       return {
         success: true,
-        data: response.data,
+        data: {
+          token: response.data.token,
+          user: response.data.username,
+        },
       };
     } catch (error) {
       return {
