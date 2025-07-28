@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-    baseURL: process.env.REACT_APP_API_BASE_URL || 'http://localhost:3000',
+    baseURL: process.env.REACT_APP_API_BASE_URL || 'https://41ae7143-16a0-47fb-bed1-2fa3b831af6e.mock.pstmn.io',
     timeout: 10000,
     Headers : {
         'Content-Type': 'application/json',
