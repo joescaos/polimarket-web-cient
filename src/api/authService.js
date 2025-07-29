@@ -8,7 +8,8 @@ export const login = async (credentials) => {
         success: true,
         data: {
           token: response.data.token,
-          user: response.data.username,
+          user: response.data.user,
+          id: response.data.id,
         },
       };
     } catch (error) {

@@ -36,18 +36,14 @@ const ProductsTab = () => {
             <th>ID</th>
             <th>Nombre</th>
             <th>Cantidad</th>
-            <th>Precio</th>
-            <th>Categoría</th>
           </tr>
         </thead>
         <tbody>
           {products.map((product) => (
-            <tr key={product.id}>
-              <td>{product.id}</td>
-              <td>{product.nombre}</td>
-              <td>{product.cantidad}</td>
-              <td>${product.precio.toFixed(2)}</td>
-              <td>{product.categoria}</td>
+            <tr key={product.tax_id}>
+              <td>{product.tax_id}</td>
+              <td>{product.name}</td>
+              <td>{product.quantity}</td>
             </tr>
           ))}
         </tbody>

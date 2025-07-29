@@ -1,16 +1,16 @@
 export const Auth = {
-    LOGIN: '/auth/login',
+    LOGIN: '/Api/Auth/login',
     LOGOUT: '/auth/logout'
   };
 
   export const Products = {
-    LIST: '/products',
+    LIST: '/Api/PoliMarket/products',
     DETAILS: (id) => `/products/${id}`,
     CREATE: '/products',
   };
 
   export const Clients = {
-    LIST: '/clients',
+    LIST: 'Api/PoliMarket/customers',
     DETAILS: (id) => `/clients/${id}`,
     CREATE: '/clients',
   };

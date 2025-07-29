@@ -4,7 +4,7 @@ import './styles.css';
 
 const LoginForm = ({ onLoginSuccess }) => {
     const { login } = useAuth();
-    const [credentials, setCredentials] = useState({ username: '', password: '' });
+    const [credentials, setCredentials] = useState({ user: '', password: '' });
     const [error, setError] = useState(null);
 
     const handleChange = (e) => {
@@ -19,15 +19,15 @@ const LoginForm = ({ onLoginSuccess }) => {
         try {
             const result = await login(credentials);
             if (result.success) {
-                setCredentials({ username: '', password: '' });
+                setCredentials({ user: '', password: '' });
                 onLoginSuccess();
             } else {
                 setError(result.error || 'Credenciales incorrectas');
-                setCredentials({ username: '', password: '' }); 
+                setCredentials({ user: '', password: '' }); 
             }
         } catch (err) {
             setError('Error al conectar con el servidor');
-            //setCredentials({ username: '', password: '' }); // Limpia los campos
+            setCredentials({ username: '', password: '' });
         }
     };
 
@@ -42,12 +42,12 @@ const LoginForm = ({ onLoginSuccess }) => {
                     <label htmlFor="username">Usuario:</label>
                     <input
                         type="text"
-                        id="username"
-                        name="username"
-                        value={credentials.username}
+                        id="user"
+                        name="user"
+                        value={credentials.user}
                         onChange={handleChange}
                         required
-                        autoComplete="username"
+                        autoComplete="user"
                     />
                 </div>
                 <div className="form-group">

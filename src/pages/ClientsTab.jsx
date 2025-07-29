@@ -36,6 +36,7 @@ const ClientsTab = () => {
                         <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>DNI</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
                                 <th>Teléfono</th>
@@ -45,9 +46,10 @@ const ClientsTab = () => {
                             {clients.map((client) => (
                                 <tr key={client.id}>
                                     <td>{client.id}</td>
-                                    <td>{client.nombre}</td>
+                                    <td>{client.dni}</td>
+                                    <td>{client.first_name} {client.last_name}</td>
                                     <td>{client.email}</td>
-                                    <td>{client.telefono}</td>
+                                    <td>{client.phone}</td>
                                 </tr>
                             ))}
                         </tbody>
